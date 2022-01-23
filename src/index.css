@@ -139,6 +139,9 @@ p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    margin-top: 20vh;
+    gap: 2rem;
   }
   .update-center h1{
     font-size:var(--big-font-size);
