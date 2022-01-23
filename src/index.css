@@ -134,7 +134,16 @@ p {
     background: var(--first-color-light-medium);
     border: 2px solid var(--first-color-light-medium);
   }
-
+  .update-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .update-center h1{
+    font-size:var(--big-font-size);
+    color: rgb(189, 69, 69);
+  }
 
 /* Login */
 .login{
