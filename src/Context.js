@@ -22,23 +22,23 @@ const AppProvider = ({children}) => {
 
     const [state, dispatch] = useReducer(reducer, initialState);
 
-    const fetchLyrics  = async (url) => {
-        dispatch({ type:'SET_LOADING'});
+    // const fetchLyrics  = async (url) => {
+    //     dispatch({ type:'SET_LOADING'});
         
-        // Api call for retrieving tracks data
-        axios(`https://api.spotify.com/v1/artists/${id}/top-tracks?market=${market}`,{
-            'method': 'GET',
-            'headers': {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json',
-                'Authorization': 'Bearer ' + tokenresponse.data.access_token
-            }
-        }).then(trackresponse=> {
-            console.log(trackresponse.data.tracks);
-            setTracks(trackresponse.data.tracks);
-        }).catch(error=> console.log(error))
-        }).catch(error => console.log(error));
-    }
+    //     // Api call for retrieving tracks data
+    //     axios(`https://api.spotify.com/v1/artists/${id}/top-tracks?market=${market}`,{
+    //         'method': 'GET',
+    //         'headers': {
+    //             'Content-Type': 'application/json',
+    //             'Accept': 'application/json',
+    //             'Authorization': 'Bearer ' + tokenresponse.data.access_token
+    //         }
+    //     }).then(trackresponse=> {
+    //         console.log(trackresponse.data.tracks);
+    //         setTracks(trackresponse.data.tracks);
+    //     }).catch(error=> console.log(error))
+    //     }).catch(error => console.log(error));
+    // }
 
     const handleSearch = (searchValue) => {
         dispatch({type:'HANDLE_SEARCH', payload:searchValue});
